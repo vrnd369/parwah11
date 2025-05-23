@@ -1,0 +1,170 @@
+/* Header Wrapper */
+header {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Container Layout */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: block;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Navigation (Desktop) */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #103868;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  font-family: var(--title-font, "Segoe UI", sans-serif);
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+/* Hamburger Icon */
+.mobile-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #103868;
+}
+
+/* ===================== */
+/* Mobile View Styling   */
+/* ===================== */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .footer-section p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .footer-section p img {
+    margin-top: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .footer-section ul {
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .footer-section .footer-address {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer-section .footer-address span {
+    max-width: 90vw;
+    text-align: left;
+  }
+}
+
+.footer-section .footer-address {
+  align-items: flex-start;
+}
+
+.footer-section .footer-address img {
+  margin-top: 4px; /* aligns icon with first line of address */
+}
+
+.footer-section .footer-address span {
+  text-align: left;
+  display: inline-block;
+  max-width: 220px; /* or 90vw for mobile */
+  word-break: break-word;
+}
