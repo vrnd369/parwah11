@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { ChevronRight, ChevronLeft, Menu } from "lucide-react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 import "../styles/Hero.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
